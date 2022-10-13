@@ -2,16 +2,16 @@
 /*
  * @Author: 程英明
  * @Date: 2022-08-02 07:20:54
- * @LastEditTime: 2022-08-03 21:54:25
+ * @LastEditTime: 2022-10-13 16:41:39
  * @LastEditors: 程英明
  * @Description: 
- * @FilePath: \removehtml\index.php
+ * @FilePath: \winbili\index.php
  * QQ:504875043@qq.com
  */
 
 /**
  * 获取bilibili的列表
- * let arrList=[];let obj=$(".part");let len=obj.length; for (let index = 0; index < len; index++) {arrList[index]=obj[index].innerHTML.split(" ").join("")};console.log(arrList)
+ * 
  *
  * @var [type]
  */
