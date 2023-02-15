@@ -1,17 +1,11 @@
-﻿$vedioPath='C:\Users\admin\Downloads'
-cd $vedioPath
-$files=ls | Sort-Object -Property CreationTime
-$listPath='C:\Users\admin\Desktop\removehtml\newlist.txt'
-$listName=Get-Content $listPath -Encoding UTF8
-$timeList=@()
-foreach ($file in $files)
-{
-   $extension = (Split-Path -Path $file -Leaf).Split(".")[1]
-   $newName="{0}{1}.{2}" -f $files.IndexOf($file),$listName[$files.IndexOf($file)],$extension
-   mv $file $newName
-#  $timeList += (($file.CreationTime.Ticks - 621355968000000000)/10000000).ToString().Substring(0,10)
-  #echo (($file.CreationTime.Ticks - 621355968000000000)/10000000).ToString().Substring(0,10)
-  #echo $file.CreationTime
-  #echo ===
-  #echo $file.LastWriteTime
+$path = 'C:\Users\admin\Downloads'
+$listPath = 'C:\Users\admin\Desktop\winbili\newlist.txt'
+$listName = Get-Content $listPath -Encoding UTF8
+$counter = 1
+Get-ChildItem $path | Sort-Object -Property CreationTime | ForEach-Object {
+  $file = $_
+  $extension = $file.Extension #获取文件扩展名
+  $newFileName = "{0}_{1}{2}" -f $counter, $listName[$counter - 1], $extension #构建新文件名
+  $counter++ #计数器加1
+  Rename-Item $file.FullName -NewName $newFileName #重命名文件
 }
