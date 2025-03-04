@@ -1,3 +1,6 @@
+#### 更新getname.js（2025-03-04）
+- 更新标题获取的类名$(".title-txt")
+
 # winbili
 使用油猴脚本下载bilibili视频重新命名
 ### 环境要求

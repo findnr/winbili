@@ -1,5 +1,5 @@
-$path = 'C:\Users\admin\Downloads'
-$listPath = 'C:\Users\admin\Desktop\winbili\newlist.txt'
+$path = 'C:\Users\administrator\Downloads'
+$listPath = 'C:\Users\administrator\Desktop\winbili\newlist.txt'
 $listName = Get-Content $listPath -Encoding UTF8
 $counter = 1
 Get-ChildItem $path | Sort-Object -Property CreationTime | ForEach-Object {

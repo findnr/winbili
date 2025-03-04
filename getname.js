@@ -7,4 +7,4 @@
  * @FilePath: \winbili\getname.js
  * QQ:504875043@qq.com
  */
-let arrList = []; let obj = $(".part"); let len = obj.length; for (let index = 0; index < len; index++) { arrList[index] = obj[index].innerHTML.split(" ").join("") }; console.log(arrList);
+let arrList = []; let obj = $(".title-txt"); let len = obj.length; for (let index = 0; index < len; index++) { arrList[index] = obj[index].innerHTML.split(" ").join("") }; console.log(arrList);
